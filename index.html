@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet"> 
-    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+
     <!-- Icons -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css' integrity='sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==' crossorigin='anonymous'/>
-    
+
+    <!-- Framework css link -->
+    <link rel="stylesheet" href="./css/12-bool-framework.css">
+
     <!-- Main css link -->
     <link rel="stylesheet" href="./css/style.css">
-    
+
     <!-- Window Title -->
     <title>Boolfy</title>
 </head>
@@ -22,138 +25,198 @@
     <main class="flex">
 
         <!-- Sidebar -->
-        <nav class="sidebar"></nav>
+        <nav class="sidebar flex-column">
+            <div class="top-bar">
+
+                <!-- Logo -->
+                <div class="logo pd-l15">
+                    <a href="#"><img src="./img/logo.svg" alt="spotify logo"></a>
+                </div>
+
+                <!-- Nav list -->
+                <ul class="nav-list no-style-list mr-b30">
+                    <li>
+                        <a class="flex-inline items-flex-center mr-b15 pd-l15" href="#">
+                            <img src="./img/home.svg" alt="home">
+                            <span class="c-white">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex-inline items-flex-center mr-b15 pd-l15" href="#">
+                            <img src="./img/search.svg" alt="search">
+                            <span>Cerca</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex-inline items-flex-center pd-l15" href="#">
+                            <img src="./img/libreria.svg" alt="library">
+                            <span>La tua Libreria</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Playlist -->
+                <div class="playlist-content pd-l15">
+                    <h3 class="text-uppercase mr-b15">playlist</h3>
+                    <div class="mr-b15">
+                        <a class="flex-inline items-flex-center" href="#">
+                            <div class="square-plus flex items-flex-center justify-center"><i class="fas fa-plus"></i></div>
+                            <span class="text-14">Crea Playlist</span>
+                        </a>
+                    </div>
+                    <ul class="playlist-items no-style-list">
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom-bar pd-l15">
+                <a class="flex-inline items-flex-center mr-b10" href="#">
+                    <img src="./img/download.svg" alt="download">
+                    <span>Installa app</span>
+                </a>
+                <hr>
+                <a class="flex-inline items-flex-center mr-t10" href="#">
+                    <span class="circle-wrap"><img src="./img/profile.svg" alt="profile img"></span>
+                    <span class="c-white">John Doe</span>
+                </a>
+            </div>
+        </nav>
 
         <!-- App-content -->
         <div class="app-content">
             <div class="app-wrap">
-                <div class="upgrade"></div>
+
+                <!-- Upgrade -->
+                <div class="upgrade-wrap">
+                    <div class="upgrade">
+                        <a class="btn text-right text-uppercase" href="#">Effettua l'upgrade</a>
+                    </div>
+                </div>
+                
+                <!-- Top-list -->
                 <div class="top-list-wrap">
-                    <ul>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
+                    <ul class="list-inline text-uppercase font-bold">
+                        <li>
+                            <a href="#">in evidenza</a>
+                            <hr>
+                        </li>
+                        <li><a href="#">podcast</a></li>
+                        <li><a href="#">classifiche</a></li>
+                        <li><a href="#">generi e mood</a></li>
+                        <li><a href="#">nuove uscite</a></li>
+                        <li><a href="#">scopri</a></li>
                     </ul>
                 </div>
 
                 <!-- Gallery -->
                 <div class="main-gallery">
-                    <h2></h2>
-                    <div class="gallery flex">
+                    <h2>Recently played</h2>
+                    <div class="gallery flex mr-b30">
                         <div class="col">
                             <div class="gallery-items">
-                                <img src="./img/metal_lifting.jpg" alt="">
+                                <img class="mr-b10" src="./img/metal_lifting.jpg" alt="heavy metal img">
+                                <div class="gallery-text flex">
+                                    <h4 class="mr-b5">Heavy Metal</h4>
+                                    <span>Subtitle</span>
+                                </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="gallery-items">
-                                <img src="./img/metal_lifting.jpg" alt="">
+                                <img class="mr-b10" src="./img/stranger.jpeg" alt="stranger things img">
+                                <div class="gallery-text flex text-center">
+                                    <h4 class="mr-b5">Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</h4>
+                                    <span>Kyle Dixon & Michael Stein</span>
+                                </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="gallery-items">
-                                <img src="./img/metal_lifting.jpg" alt="">
+                                <img class="mr-b10" src="./img/aquietplace.jpeg" alt="quite place img">
+                                <div class="gallery-text flex">
+                                    <h4 class="mr-b5">A quiet place</h4>
+                                    <span>Subtitle</span>
+                                </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="gallery-items">
-                                <img src="./img/metal_lifting.jpg" alt="">
-                            </div>
-                        </div>   <div class="col">
-                            <div class="gallery-items">
-                                <img src="./img/metal_lifting.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="gallery-items">
-                                <img src="./img/metal_lifting.jpg" alt="">
-                            </div>
-                        </div>   <div class="col">
-                            <div class="gallery-items">
-                                <img src="./img/metal_lifting.jpg" alt="">
+                                <img class="mr-b10" src="./img/split.jpeg" alt="split img">
+                                <div class="gallery-text flex">
+                                    <h4 class="mr-b5">Split</h4>
+                                    <span>Subtitle</span>
+                                </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="gallery-items">
-                                <img src="./img/metal_lifting.jpg" alt="">
-                            </div>
-                        </div>   <div class="col">
-                            <div class="gallery-items">
-                                <img src="./img/metal_lifting.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="gallery-items">
-                                <img src="./img/metal_lifting.jpg" alt="">
-                            </div>
-                        </div>   <div class="col">
-                            <div class="gallery-items">
-                                <img src="./img/metal_lifting.jpg" alt="">
+                                <img class="mr-b10" src="./img/cure.jpeg" alt="cure img">
+                                <div class="gallery-text flex">
+                                    <h4 class="mr-b5">A cure for wellness</h4>
+                                    <span>Subtitle</span>
+                                </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="gallery-items">
-                                <img src="./img/metal_lifting.jpg" alt="">
-                            </div>
-                        </div>   <div class="col">
-                            <div class="gallery-items">
-                                <img src="./img/metal_lifting.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="gallery-items">
-                                <img src="./img/metal_lifting.jpg" alt="">
-                            </div>
-                        </div>   <div class="col">
-                            <div class="gallery-items">
-                                <img src="./img/metal_lifting.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="gallery-items">
-                                <img src="./img/metal_lifting.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="gallery-items">
-                                <img src="./img/metal_lifting.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="gallery-items">
-                                <img src="./img/metal_lifting.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="gallery-items">
-                                <img src="./img/metal_lifting.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="gallery-items">
-                                <img src="./img/metal_lifting.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="gallery-items">
-                                <img src="./img/metal_lifting.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="gallery-items">
-                                <img src="./img/metal_lifting.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="gallery-items">
-                                <img src="./img/metal_lifting.jpg" alt="">
+                                <img class="mr-b10" src="./img/sinister.jpeg" alt="sinister img">
+                                <div class="gallery-text flex">
+                                    <h4 class="mr-b5">Sinister</h4>
+                                    <span>Subtitle</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>    
+                    <h2 class="mr-b10">Creato per John Doe</h2>
+                    <p>Più ascolti, più accurati saranno i suggerimenti.</p>
+                    <div class="gallery flex mr-b30">
+                        <div class="col">
+                            <div class="gallery-items">
+                                <img class="mr-b10" src="./img/radar.jpeg" alt="radar img">
+                                <div class="gallery-text flex">
+                                    <h4 class="mr-b5">Release Radar</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="gallery-items">
+                                <img class="mr-b10" src="./img/mixdaily.jpeg" alt="mix-daily img">
+                                <div class="gallery-text flex">
+                                    <h4 class="mr-b5">Daily Mix 1</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="mr-b10">Artisti più popolari</h2>
+                    <p>Più ascolti, più accurati saranno i suggerimenti.</p>
+                    <div class="gallery flex mr-b30">
+                        <div class="col">
+                            <div class="gallery-items">
+                                <img class="img-rounded mr-b10" src="./img/youg.jpeg" alt="young album img">
+                                <div class="gallery-text flex">
+                                    <h4 class="mr-b5">Lana Del Rey</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="gallery-items">
+                                <img class="img-rounded mr-b10" src="./img/einaudi.jpeg" alt="einaudi album img">
+                                <div class="gallery-text flex">
+                                    <h4 class="mr-b5">Ludovico Einaudi</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
