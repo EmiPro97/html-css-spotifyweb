@@ -282,7 +282,7 @@ transition: color 0.4s;
 
 /* Top-list */
 .app-content .top-list-wrap{
-    padding-top: 95px;
+    padding: 95px 20px 0;
     max-width: 1600px;
 }
 
@@ -355,7 +355,7 @@ transition: color 0.4s;
 
 .foot-content .player-left .player-img{
     width: 50px;
-    height: 50px;
+    height: auto;
 }
 
 .foot-content .player-left .player-img img{
@@ -380,6 +380,9 @@ transition: color 0.4s;
     color: #fff;
 }
 
+.foot-content .player-left div:last-child i{
+    padding: 5px 5px 0;
+}
 
 /* Player center */
 .player-center .player-center-icon i{
@@ -432,6 +435,7 @@ transition: color 0.4s;
 .player-right .player-time-bar hr:first-child{
     width: 7.5vw;
     max-width: 150px;
+    min-width: 70px;
 }
 
 .player-time-bar hr:last-child{
@@ -482,6 +486,10 @@ transition: color 0.4s;
     transition: color  0.4s;
 }
 
+.foot-content .player-right i:first-child{
+    padding-left: 0;
+}
+
 .foot-content .player-right i:nth-child(3){
     padding-right: 0;
 }
@@ -504,6 +512,7 @@ transition: color 0.4s;
 
 /* MD */
 @media screen and (max-width: 1199px){
+    /* GALLERY */
     .app-content .gallery .col{
         flex-basis: calc((100% / 4) - 5px);
     }
@@ -512,7 +521,73 @@ transition: color 0.4s;
 
 /* SM */
 @media screen and (max-width: 767px){
+    /* GALLERY */
     .app-content .gallery .col{
         flex-basis: calc((100% / 2) - 5px);
     }
+
+
+    /* FOOTER */
+
+    /* Player-left */
+    .foot-content .player-left .player-img{
+        width: 40px;
+    }
+
+    .foot-content .player-left .player-img-text h4{
+        font-size: 11px;
+    }
+
+    .foot-content .player-left .player-img-text span{
+        font-size: 9px;
+    }
+
+    .foot-content .player-left div:last-child{
+        display: flex;
+        flex-direction: column;
+        font-size: 13px;
+    }
+    
+    
+    /* Player-center */
+    .foot-content .player-bar span{
+        font-size: 9px;
+    }
+    
+    .foot-content .player-bar .player-time-bar{
+        margin: 0 5px;
+    }
+    
+    .foot-content .player-center{
+        text-align: 13px;
+    }
+
+    .player-center .player-center-icon i:nth-child(3){
+        font-size: 28px;
+        padding: 12px 15px;
+    }
+
+    .player-center .player-bar .player-time-bar hr:first-child{
+        width: 25vw;
+    }
+
+
+    /* Player-right */
+    .foot-content .player-right{
+        font-size: 13px;
+    }
+
+    .foot-content .player-right i{
+        padding: 0 5px;
+    }
+
+    .foot-content .player-right .player-time-bar{
+        margin-left: 7px;
+    }
+}
+
+
+/* XS */
+@media screen and (max-width: 601px){
+
 }
