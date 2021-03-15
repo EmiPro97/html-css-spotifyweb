@@ -55,6 +55,14 @@
 }
 
 /* Margin */
+.mr-l10{
+    margin-left: 10px;
+}
+
+.mr-l30{
+    margin-left: 30px;
+}
+
 .mr-t10{
     margin-top: 10px;
 }
