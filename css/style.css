@@ -10,6 +10,7 @@ h1, h2, h3, h4, h5, h6{
     color: #fff;
     font-weight: 800;
 }
+/* /////////////////////////////////////////////////////////// */
 
 /* UTILITIES */
 
@@ -118,7 +119,7 @@ a{
     border-radius: 18px;
     font-size: 10px;
 }
-
+/* /////////////////////////////////////////////////////////// */
 
 /* MAIN-CONTENT */
 .sidebar,
@@ -126,9 +127,9 @@ a{
 .app-content{
     height: calc(100vh - 80px);
 }
+/* /////////////////////////////////////////////////////////// */
 
-
-/* Sidebar / XS-sidebar*/
+/* SIDEBAR/ XS-SIDEBAR*/
 .sidebar,
 .XS-sidebar{
     min-width: 200px;
@@ -173,6 +174,7 @@ transition: color 0.4s;
     transition: fill 0.4s;
 }
 
+
 /* Hover nav-list */
 .sidebar .nav-list a:hover span{
     color: #fff;
@@ -211,6 +213,7 @@ transition: color 0.4s;
     line-height: 1.8rem;
 }
 
+
 /* Hover playlist */
 .playlist-content a:hover{
     color: #fff;
@@ -237,6 +240,7 @@ transition: color 0.4s;
     width: 100%;
 }
 
+
 /* Hover bottom-bar */
 .bottom-bar a:first-child:hover span{
     color: #fff;
@@ -245,18 +249,19 @@ transition: color 0.4s;
 .bottom-bar a:first-child:hover svg{
     fill: #fff;
 }
+/* /////////////////////////////////////////////////////////// */
 
-
-/* App-content */
+/* APP.CONTENT*/
 .app-content{
     flex-grow: 1;
     background: #141922;
     position: relative;
 }
 
-.app-content .app-wrap{
+.app-content .app-scrollable{
     height: 100%;
     overflow-y: auto;
+    padding: 95px 15px 0;
 }
 
 
@@ -284,6 +289,7 @@ transition: color 0.4s;
     transition: transform 0.2s;
 }
 
+
 /* Hover upgrade */
 .app-content .upgrade .btn:hover{
     transform: scale(1.1) translateY(-50%);
@@ -292,7 +298,6 @@ transition: color 0.4s;
 
 /* Top-list */
 .app-content .top-list-wrap{
-    padding: 95px 20px 0;
     max-width: 1600px;
 }
 
@@ -310,6 +315,7 @@ transition: color 0.4s;
     border-color: #adff2f;
 }
 
+
 /* Hover top-list */
 .app-content .top-list-wrap li a:hover{
     color: #fff;
@@ -317,34 +323,27 @@ transition: color 0.4s;
 
 
 /* Gallery */
-.main-gallery{
-    padding-left: 15px;
-}
-
-.app-content .gallery{
+.gallery-section .gallery-content{
     flex-wrap: wrap;
 }
 
-.app-content .gallery .col{
-    flex-basis: calc((100% / 6) - 5px);
-    padding: 5px;
+.gallery-section .gallery-content .gallery-col{
+    flex-basis: calc((100% / 6) - 15px);
+    margin-right: 15px;
+    margin-bottom: 15px;
     max-width: 250px;
 }
 
-.app-content .gallery .col:first-child{
-    margin-left: -5px;
-}
-
-.app-content .gallery-items .gallery-text{
-    flex-direction: column;
-    align-items: center;
-}
-
-.app-content .gallery .col .gallery-items img{
+.gallery-section .gallery-col img{
     width: 100%;
     cursor: pointer;
 }
 
+.gallery-section .gallery-col .gallery-text{
+    flex-direction: column;
+    align-items: center;
+}
+/* /////////////////////////////////////////////////////////// */
 
 /* FOOTER */
 .foot-content{
@@ -380,6 +379,7 @@ transition: color 0.4s;
                 text-decoration 0.4s;
 }
 
+
 /* Hover player-left */
 .foot-content .player-left a:hover > span{
     text-decoration: underline;
@@ -394,6 +394,7 @@ transition: color 0.4s;
     padding: 5px 5px 0;
 }
 
+
 /* Player center */
 .player-center .player-center-icon i{
     padding: 8px;
@@ -405,6 +406,7 @@ transition: color 0.4s;
     font-size: 30px;
     padding: 10px 20px;
 }
+
 
 /* Hover player-center */
 .player-center .player-center-icon i:hover{
@@ -512,28 +514,29 @@ transition: color 0.4s;
     top: 2px;
 }
 
+
 /* Hover player-right */
 .foot-content .player-right i:hover{
     color: #fff;
 }
-
+/* /////////////////////////////////////////////////////////// */
 
 /* RESPONSIVE */
 
 /* MD */
 @media screen and (max-width: 1199px){
     /* GALLERY */
-    .app-content .gallery .col{
-        flex-basis: calc((100% / 4) - 5px);
+    .gallery-section .gallery-content .gallery-col{
+        flex-basis: calc((100% / 4) - 15px);
     }
 }
-
+/* /////////////////////////////////////////////////////////// */
 
 /* SM */
 @media screen and (max-width: 767px){
     /* GALLERY */
-    .app-content .gallery .col{
-        flex-basis: calc((100% / 2) - 5px);
+    .gallery-section .gallery-content .gallery-col{
+        flex-basis: calc((100% / 2) - 15px);
     }
 
 
@@ -595,10 +598,11 @@ transition: color 0.4s;
         margin-left: 7px;
     }
 }
-
+/* /////////////////////////////////////////////////////////// */
 
 /* XS */
 @media screen and (max-width: 600px){
+    /* SIDEBAR */
     .sidebar{
         display: none;
     }
@@ -628,3 +632,4 @@ transition: color 0.4s;
         margin-right: 0;
     }
 }
+/* /////////////////////////////////////////////////////////// */
