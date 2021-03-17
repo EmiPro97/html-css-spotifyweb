@@ -78,15 +78,6 @@ a{
     color: inherit;
 }
 
-.app-content span,
-.app-content p{
-    font-size: 10px;
-}
-
-.playlist-items a{
-    font-size: 11px;
-}
-
 .c-white{
     color: #fff;
 }
@@ -188,7 +179,7 @@ transition: color 0.4s;
 
 /* Playlist */
 .playlist-content a{
-    transition: color 0.4s,
+    transition: color 0.4s;
 }
 
 .playlist-content .square-plus{
@@ -256,6 +247,11 @@ transition: color 0.4s;
     flex-grow: 1;
     background: #141922;
     position: relative;
+}
+
+.app-content span,
+.app-content p{
+    font-size: 10px;
 }
 
 .app-content .app-scrollable{
